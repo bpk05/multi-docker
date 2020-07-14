@@ -18,6 +18,7 @@ RUN npm run build
 #Specify a base image for 2nd phase build
 From nginx
 EXPOSE 3000
+#adding below for making nginx to use 3000 at client
 COPY ./nginx/default.conf /etc/ngnix/conf.d/default.conf
 
 #Dumping the content created in previous stage
