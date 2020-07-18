@@ -11,6 +11,8 @@ services:
       context: ./nginx
     ports:
       - '3050:80'
+    securityContext:
+      runAsNonRoot: true
   api:
     build:
       context: ./server
